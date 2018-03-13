@@ -13,9 +13,9 @@
 
 <body>
     <div id="particles-js" class="constellation"></div>
-    <div class="row">
+    <div class="row" style="pointer-events: none">
         <div class="mdl-layout--fixed-header col-xs-12 col-md-offset-2 col-md-8 demo-layout-transparent mdl-layout mdl-js-layout">
-            <header class="mdl-layout__header mdl-layout__header--transparent">
+            <header class="mdl-layout__header mdl-layout__header--transparent" style="pointer-events: all">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
                     <span class="mdl-layout-title title">dotto</span>
@@ -25,23 +25,25 @@
                     <nav class="mdl-navigation">
                         <a class="mdl-navigation__link nav-link" href="">ABOUT</a>
                         <a class="mdl-navigation__link nav-link" href="">DOWNLOAD</a>
-                        <a class="mdl-navigation__link nav-link" href="">PROFILE</a>
                         <a class="mdl-navigation__link nav-link" href="">SUPPORT</a>
                     </nav>
                 </div>
             </header>
-            <div class="mdl-layout__drawer transparent-back">
+            <div class="mdl-layout__drawer transparent-back" style="pointer-events: all">
                 <nav class="mdl-navigation" style="margin-top: 4em;">
-                    <a class="mdl-navigation__link nav-linkx" style="
-    border-top-right-radius: 0.5em" href="">ABOUT</a>
+                    <a class="mdl-navigation__link nav-linkx" style="border-top-right-radius: 0.5em" href="">ABOUT</a>
                     <a class="mdl-navigation__link nav-linkx" href="">DOWNLOAD</a>
-                    <a class="mdl-navigation__link nav-linkx" href="">PROFILE</a>
-                    <a class="mdl-navigation__link nav-linkx" style="
-    border-bottom-right-radius: 0.5em;" href="">SUPPORT</a>
+                    <a class="mdl-navigation__link nav-linkx" href="">LOGIn</a>
+                    <a class="mdl-navigation__link nav-linkx" style="border-bottom-right-radius: 0.5em;" href="">SUPPORT</a>
                 </nav>
             </div>
+            <div class="pro_bar">
+                <div class="profile_container mdl-shadow--2dp">
+                    <img class="picture" src="assets/dotto_logo_svg.svg">
+                </div>
+                <h1 class="pro_username">username</h1>
+            </div>
             <main class="mdl-layout__content mdl-card content">
-
             </main>
         </div>
     </div>

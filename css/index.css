@@ -33,7 +33,7 @@ body {
 }
 
 .content {
-    margin-top: 15vh;
+    margin-top: -4em;
     width: 100%;
 }
 
@@ -45,4 +45,47 @@ body {
     .mdl-navigation__link {
         display: none;
     }
+}
+
+.main_bar {
+    color: #000000;
+}
+
+.pro_bar {
+    margin-top: 5em;
+    margin-right: 2em;
+    margin-left: 50%;
+    z-index: 2;
+    display: inline-block;
+}
+
+.profile_container {
+    float: right;
+    display: block;
+    background-color: #000000;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 0.25em;
+    border-width: 0
+}
+
+.picture {
+    width: 100%;
+}
+
+.profile_edge {
+    display: block;
+    background-color: #FF0000;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 0.5em;
+    margin: 0.5em;
+}
+
+.pro_username {
+    float: right;
+    margin-top: 2em;
+    font-family: "Russo one";
+    font-size: 2em;
+    padding-right: 0.5em;
 }

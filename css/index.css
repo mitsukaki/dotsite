@@ -10,18 +10,26 @@ body {
 }
 
 .title {
-    font-family: Righteous;
+    font-family: "Righteous";
     font-size: 3em;
 }
 
 .transparent-back {
     background-color: rgba(0, 0, 0, 0);
-    border-width: 0;
     border-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
 }
 
 .nav-link {
-    font-family: Russo One;
+    font-family: "Russo One";
+}
+
+.nav-linkx {
+    font-family: "Russo One";
+    text-align: center;
+    border-radius: 0em;
+    margin-bottom: 0.5em;
+    background-color: #000000;
 }
 
 .content {
@@ -31,4 +39,10 @@ body {
 
 .nav_hack {
     margin-left: 0.5em;
+}
+
+@media (min-width: 5000em) {
+    .mdl-navigation__link {
+        display: none;
+    }
 }

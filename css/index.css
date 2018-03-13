@@ -10,25 +10,82 @@ body {
 }
 
 .title {
-    font-family: Righteous;
+    font-family: "Righteous";
     font-size: 3em;
 }
 
 .transparent-back {
     background-color: rgba(0, 0, 0, 0);
-    border-width: 0;
     border-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
 }
 
 .nav-link {
-    font-family: Russo One;
+    font-family: "Russo One";
+}
+
+.nav-linkx {
+    font-family: "Russo One";
+    text-align: center;
+    border-radius: 0em;
+    margin-bottom: 0.5em;
+    background-color: #000000;
 }
 
 .content {
-    margin-top: 15vh;
+    margin-top: -4em;
     width: 100%;
 }
 
 .nav_hack {
     margin-left: 0.5em;
+}
+
+@media (min-width: 5000em) {
+    .mdl-navigation__link {
+        display: none;
+    }
+}
+
+.main_bar {
+    color: #000000;
+}
+
+.pro_bar {
+    margin-top: 5em;
+    margin-right: 2em;
+    margin-left: 50%;
+    z-index: 2;
+    display: inline-block;
+}
+
+.profile_container {
+    float: right;
+    display: block;
+    background-color: #000000;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 0.25em;
+    border-width: 0
+}
+
+.picture {
+    width: 100%;
+}
+
+.profile_edge {
+    display: block;
+    background-color: #FF0000;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 0.5em;
+    margin: 0.5em;
+}
+
+.pro_username {
+    float: right;
+    margin-top: 2em;
+    font-family: "Russo one";
+    font-size: 2em;
+    padding-right: 0.5em;
 }

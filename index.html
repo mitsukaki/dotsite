@@ -18,13 +18,13 @@
             <header class="mdl-layout__header mdl-layout__header--transparent" style="pointer-events: all">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
-                    <span class="mdl-layout-title title">dotto</span>
+                    <span class="mdl-layout-title title"><img src="assets/dotto_logo_svg.svg" class="title-icon"> dotto</span>
                     <!-- Add spacer, to align navigation to the right -->
                     <div class="mdl-layout-spacer"></div>
                     <!-- Navigation -->
                     <nav id="top-nav" class="mdl-navigation">
                         <a class="mdl-navigation__link nav-link" href="">ABOUT</a>
-                        <a class="mdl-navigation__link nav-link" href="">DOWNLOAD</a>
+                        <a class="mdl-navigation__link nav-link" href="https://lite260.itch.io/dotto">DOWNLOAD</a>
                         <a class="mdl-navigation__link nav-link" href="">SUPPORT</a>
                     </nav>
                 </div>
@@ -32,7 +32,7 @@
             <div class="mdl-layout__drawer transparent-back" style="pointer-events: all">
                 <nav class="mdl-navigation" style="margin-top: 4em;">
                     <a class="mdl-navigation__link nav-linkx" style="border-top-right-radius: 0.5em" href="">ABOUT</a>
-                    <a class="mdl-navigation__link nav-linkx" href="">DOWNLOAD</a>
+                    <a class="mdl-navigation__link nav-linkx" href="https://lite260.itch.io/dotto">DOWNLOAD</a>
                     <a class="mdl-navigation__link nav-linkx" href="">LOGIN</a>
                     <a class="mdl-navigation__link nav-linkx" style="border-bottom-right-radius: 0.5em;" href="">SUPPORT</a>
                 </nav>
@@ -46,8 +46,20 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/constellation.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="js/constellation.min.js"></script>
+    <script>
+        (function() {
+            if (!window.JSON) {
+                let script = document.createElement('script');
+                script.src = "http://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js";
+                document.body.appendChild(script);
+            }
+        }());
+
+    </script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/reqwest/2.0.5/reqwest.min.js"></script>
+    <script defer src="js/auth.js"></script>
 </body>
 
 </html>

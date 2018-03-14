@@ -62,8 +62,8 @@ body {
     float: right;
     display: block;
     background-color: #000000;
-    width: 15vh;
-    height: 15vh;
+    width: 8em;
+    height: 8em;
     border-radius: 0.25em;
     border-width: 0;
     background-image: url('https://kiddtic.files.wordpress.com/2011/10/ika-musume-also-has-mad-videos-ja-nai-ka.jpg');
@@ -96,4 +96,8 @@ body {
     main {
         margin-left: 0.5em;
     }
+}
+
+.title-icon {
+    width: 1em;
 }

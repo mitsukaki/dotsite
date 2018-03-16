@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>dotto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous|Russo+One|Ubuntu">
+    <link rel="stylesheet" href="css/auth.min.css">
+</head>
+
+<body>
+    <div class="vid">
+        <video class="back-video" autoplay="" loop="" src=""></video>
+    </div>
+    <div class="top-plate">
+        <div style="display: inline-block; margin: 0 auto;">
+            <button class="nav-btn">about</button>
+            <a href="https://lite260.itch.io/dotto"><button class="nav-btn">download</button></a>
+            <img class="icon" src="assets/dotto_logo_svg.svg">
+            <button onclick="show_signin()" class="nav-btn">sign in</button>
+            <button onclick="show_register()" class="nav-btn">register</button>
+        </div>
+    </div>
+    <div id="signin" class="pane">
+        <p class="tag">Sign in</p>
+        <input class="text" id="semail" type="text" placeholder="email">
+        <input class="text" id="spassword" type="password" placeholder="password">
+        <input class="action" onclick="signin()" type="button" value="sign in">
+        <a class="forgot" href="#">
+            <p>Forgot your password?</p>
+        </a>
+    </div>
+    <div id="register" class="pane">
+        <p class="tag">Register</p>
+        <input class="text" id="rnick" type="text" placeholder="nickname">
+        <input class="text" id="remail" type="text" placeholder="email">
+        <input class="text" id="rpassword" type="password" placeholder="password">
+        <input class="text" id="rconfirm" type="password" placeholder="confirm">
+        <input class="action" onclick="register()" style="margin-bottom: 1em;" type="button" value="register">
+    </div>
+    <div class="bottom-plate">
+        <h1 class="title">dotto</h1>
+        <p class="notice"> &copy; Copyright dotto 2018</p>
+    </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
+    <script defer src="js/authcontrol.min.js"></script>
+    <script defer src="js/auth.js"></script>
+</body>
+
+</html>

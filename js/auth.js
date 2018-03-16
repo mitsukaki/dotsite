@@ -26,7 +26,7 @@ function register() {
     });
 }
 
-function rest(type, endpoint, obj) {
+function rest(type, endpoint, obj, cb) {
     var xhr = new XMLHttpRequest();
     xhr.open(type, location.origin + endpoint, true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');

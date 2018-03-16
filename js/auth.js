@@ -11,17 +11,31 @@ function ping() {
 }
 
 function signin() {
-    rest("post", "/api/auth", {
-        email: document.getElementById("semail").value,
-        pass: document.getElementById("spassword").value
+    rest('post', '/api/auth', {
+        email: document.getElementById('semail').value,
+        pass: document.getElementById('spassword').value
+    }, function (res) {
+        if (res.s == 'ok') {
+            Cookies.set('nick', res.nick);
+            Cookies.set('access_token', res.access_token);
+            window.location = "./index.html";
+        } else {
+            alert("failed! Err: " + res.c);
+        }
     });
 }
 
 function register() {
-    rest("post", "/api/user", {
-        email: document.getElementById("remail").value,
-        nick: document.getElementById("rnick").value,
-        pass: document.getElementById("rpassword").value
+    rest('post', '/api/user', {
+        email: document.getElementById('remail').value,
+        nick: document.getElementById('rnick').value,
+        pass: document.getElementById('rpassword').value
+    }, function () {
+        if (res.s == 'ok') {
+            alert("Success! Please check your email and confirm!");
+        } else {
+            alert("failed! Err: " + res.c);
+        }
     });
 }
 
@@ -31,6 +45,6 @@ function rest(type, endpoint, obj) {
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     xhr.send(JSON.stringify(obj));
     xhr.onloadend = function () {
-        console.log(xhr.responseText);
+        cb(JSON.parse(xhr.responseText));
     };
 }

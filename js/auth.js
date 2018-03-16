@@ -27,7 +27,7 @@ function register() {
 
 function rest(type, endpoint, obj) {
     var xhr = new XMLHttpRequest();
-    xhr.open(location.origin + endpoint, rest, true);
+    xhr.open(type, location.origin + endpoint, true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     xhr.send(JSON.stringify(obj));
     xhr.onloadend = function () {

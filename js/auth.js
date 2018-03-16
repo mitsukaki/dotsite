@@ -14,6 +14,7 @@ function signin() {
     reqwest({
         url: '/api/auth',
         method: 'post',
+        contentType: 'application/json',
         data: {
             email: document.getElementById("semail").value,
             pass: document.getElementById("spassword").value
@@ -28,6 +29,7 @@ function register() {
     reqwest({
         url: '/api/user',
         method: 'post',
+        contentType: 'application/json',
         data: {
             email: document.getElementById("remail").value,
             nick: document.getElementById("rnick").value,

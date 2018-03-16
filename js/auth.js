@@ -11,32 +11,26 @@ function ping() {
 }
 
 function signin() {
-    reqwest({
-        url: '/api/auth',
-        method: 'post',
-        contentType: 'application/json',
-        data: {
-            email: document.getElementById("semail").value,
-            pass: document.getElementById("spassword").value
-        },
-        success: function (resp) {
-            console.log(resp);
-        }
+    rest("post", "/api/auth", {
+        email: document.getElementById("semail").value,
+        pass: document.getElementById("spassword").value
     });
 }
 
 function register() {
-    reqwest({
-        url: '/api/user',
-        method: 'post',
-        contentType: 'application/json',
-        data: {
-            email: document.getElementById("remail").value,
-            nick: document.getElementById("rnick").value,
-            pass: document.getElementById("rpassword").value
-        },
-        success: function (resp) {
-            console.log(resp);
-        }
+    rest("post", "/api/user", {
+        email: document.getElementById("remail").value,
+        nick: document.getElementById("rnick").value,
+        pass: document.getElementById("rpassword").value
     });
+}
+
+function rest(type, endpoint, obj) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(endpoint, rest, true);
+    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    xhr.send(JSON.stringify(obj));
+    xhr.onloadend = function () {
+        console.log(xhr.responseText);
+    };
 }

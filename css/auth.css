@@ -9,9 +9,9 @@
 .back-video {
     position: absolute;
     height: 100%;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
 }
 
 .constellation {
@@ -48,6 +48,7 @@
 }
 
 .notice {
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.4), 0 2px rgba(0, 0, 0, 0.4), 1.3px 0 rgba(0, 0, 0, 0.4), 0 -1px rgba(0, 0, 0, 0.4);
     color: #ffffff;
     text-align: center;
     margin: 0 0;
@@ -60,6 +61,8 @@
 }
 
 .nav-btn {
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.2), 1.3px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
+    box-shadow: -1px 0 rgba(0, 0, 0, 0.4), 0 2px rgba(0, 0, 0, 0.4), 1.3px 0 rgba(0, 0, 0, 0.4), 0 -1px rgba(0, 0, 0, 0.4);
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 0.25em;
@@ -69,4 +72,48 @@
     padding: 0.5em;
     vertical-align: top;
     margin-top: 3vh;
+}
+
+.pane {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: -1px 0 rgba(0, 0, 0, 0.4), 0 2px rgba(0, 0, 0, 0.4), 1.3px 0 rgba(0, 0, 0, 0.4), 0 -1px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0.25em;
+    color: #ffffff;
+}
+
+.pane .tag {
+    text-align: center;
+    font-family: "Russo One";
+    font-size: 5vh;
+    margin: 0.5em;
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.2), 1.3px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
+}
+
+.pane input {
+    display: block;
+    margin: 1em;
+    padding: 0.5em;
+    font-family: "Ubuntu";
+    font-size: 1em;
+    border-radius: 0.25em;
+    border-width: 0;
+    box-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.2), 1.3px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
+}
+
+.pane .action {
+    margin: 0 auto;
+    background-color: #872DDC;
+    color: #ffffff;
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.2), 1.3px 0 rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.2);
+}
+
+.pane .forgot {
+    color: #ffffff;
+    font-family: "Ubuntu";
+    text-align: center;
 }

@@ -128,3 +128,11 @@ body {
         margin-left: 0.5em;
     }
 }
+
+button:focus {
+    outline: 0;
+}
+
+input:focus {
+    outline: 0;
+}

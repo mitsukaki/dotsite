@@ -117,3 +117,11 @@
     font-family: "Ubuntu";
     text-align: center;
 }
+
+button:focus {
+    outline: 0;
+}
+
+input:focus {
+    outline: 0;
+}

@@ -1,15 +1,3 @@
-function ping() {
-    reqwest({
-        url: '/api/ping',
-        type: 'html',
-        crossOrigin: true
-    }).then(function (resp) {
-        console.log(resp.content);
-    }).fail(function (err, msg) {
-        console.log(msg);
-    });
-}
-
 function signin() {
     rest('post', '/api/auth', {
         email: document.getElementById('semail').value,
@@ -17,7 +5,7 @@ function signin() {
     }, function (res) {
         if (res.s == 'ok') {
             Cookies.set('nick', res.nick);
-            Cookies.set('access_token', res.access_token);
+            Cookies.set('atoken', res.access_token);
             window.location = "./index.html";
         } else {
             alert("failed! Err: " + res.c);
@@ -31,11 +19,10 @@ function register() {
         nick: document.getElementById('rnick').value,
         pass: document.getElementById('rpassword').value
     }, function () {
-        if (res.s == 'ok') {
+        if (res.s == 'ok')
             alert("Success! Please check your email and confirm!");
-        } else {
+        else
             alert("failed! Err: " + res.c);
-        }
     });
 }
 
@@ -48,3 +35,9 @@ function rest(type, endpoint, obj) {
         cb(JSON.parse(xhr.responseText));
     };
 }
+
+window.onload = function () {
+    if (window.location.pathname !== '/auth.html')
+        if (Cookies.get('atoken') == undefined)
+            window.location = "./auth.html";
+};

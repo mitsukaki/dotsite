@@ -1,3 +1,19 @@
+.vid {
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.back-video {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
 .constellation {
     display: block;
     position: fixed;
